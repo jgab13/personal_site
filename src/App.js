@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
             <Switch>
-              <Route exact path='/' render={(props) => 
+              <Route exact path='/personal_site' render={(props) => 
                               (<Home appState={this.state} {...props}/>)}/>
               <Route exact path='/ProjectPage/:projectname' render={(props) => 
                               (<ProjectPage appState={this.state} {...props}/>)}/>
