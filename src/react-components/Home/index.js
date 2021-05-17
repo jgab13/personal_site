@@ -22,15 +22,20 @@ class Home extends React.Component {
     return (
       <div>
       <div className="header">
-      <span>My name is Jonathan and I am a 4th year Computer Science student at the University of Toronto. </span>
+      <span>My name is Jonathan and I am a 4th year Computer Science student at the <a href="https://web.cs.toronto.edu/about/our-department" target="_blank">University of Toronto</a>. </span>
       </div>
+      <div className="links">
+      <a className="link" href={resumeFile} target="_blank">Resume</a>
+      <a className="link" href={transcript} target="_blank">Transcript</a>
+      <a className="link" href="https://www.linkedin.com/in/jonathan-g-b4a44616/" target="_blank">Linkedin</a>
+      <a className="link" href="https://github.com/jgab13" target="_blank">Github</a>
+      </div>
+
       <div className="top row row-cols-1 row-cols-md-3">
 
-      <Project picture={generic} title="Talent Swap" text={project1} github="https://github.com/jgab13/TalentSwap" linkedin="https://www.linkedin.com/in/jonathan-g-b4a44616/" buttonText="Random button" />
-      <Project picture={generic} title="Shoppies" text={project2} github="https://github.com/jgab13/Shoppies" linkedin="https://www.linkedin.com/in/jonathan-g-b4a44616/" buttonText="Random button" />
-      <Project picture={generic} title="fr.js Library" text={project3} github="https://github.com/jgab13/FrLibrary" linkedin="https://www.linkedin.com/in/jonathan-g-b4a44616/" buttonText="Random button" />
-      <a href={resumeFile} target="_blank">My Resume</a>
-      <a href={transcript} target="_blank">My Transcript</a>
+      <Project picture={generic} title="Talent Swap" text={project1} github="https://github.com/jgab13/TalentSwap" buttonText="Talent Swap"/>
+      <Project picture={generic} title="Shoppies" text={project2} github="https://github.com/jgab13/Shoppies" buttonText="Shoppies"/>
+      <Project picture={generic} title="fr.js Library" text={project3} github="https://github.com/jgab13/FrLibrary" buttonText="Fr Library"/>
       </div></div>
     );  
     

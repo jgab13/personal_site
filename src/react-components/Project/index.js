@@ -9,7 +9,7 @@ class Project extends React.Component {
   
 
   render() {
-    const {picture, title, text, github, linkedin, buttonText} = this.props;
+    const {picture, title, text, github, buttonText} = this.props;
     return (
       <div>
         <Card style={{ width: '18rem' }}>
@@ -19,15 +19,16 @@ class Project extends React.Component {
             <Card.Text>
               {text}
             </Card.Text>
-            <a href={github} target="_blank"><FaGithub/></a>
-            <a href={linkedin} target="_blank"><FaLinkedin/></a>
-            <FaGooglePlay/>
-            <FaFacebookSquare/>
-            <Link to={{
+            <div >
+            <a className="button-body" href={github} target="_blank"><FaGithub/></a>
+            <FaGooglePlay className="button-body" />
+            <FaFacebookSquare className="button-body"/>
+            <Link className="button-body" to={{
                   pathname: "/ProjectPage/" + title.replace(/\s+/g, ''),
-                  state: { pic: picture, title: title, text: text, github: github, linkedin: linkedin } }}>
+                  state: { pic: picture, title: title, text: text, github: github } }}>
               <Button variant="primary">{buttonText}</Button>
             </Link>
+            </div>
           </Card.Body>
         </Card>
       </div>
